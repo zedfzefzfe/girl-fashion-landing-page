@@ -120,7 +120,7 @@
       <div style="flex:1 1 420px;min-width:0;">
         <p style="margin:0 0 12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8276;">Girl's House</p>
         <h1 class="hero-title" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:54px;line-height:1.05;">Manteau long avec ceinture</h1>
-        <p style="margin:20px 0 0;font-size:24px;letter-spacing:.02em;">Dh 699,00 MAD</p>
+        <p style="margin:20px 0 0;font-size:24px;letter-spacing:.02em;">Dh 599,00 MAD</p>
         <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:#8a8276;">Taxes incluses. <a href="#" class="lnk" style="color:#6b6459;border-bottom:1px solid #b9b0a2;">Frais d&#8217;expédition</a> calculés à l&#8217;étape de paiement.</p>
         <p style="margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#6b7257;"><span style="width:7px;height:7px;border-radius:50%;background:#6b7257;display:inline-block;"></span>En stock — expédié sous 24h</p>
 
@@ -200,22 +200,19 @@
         <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;">Commander maintenant</h2>
         <p style="margin:0 0 22px;font-size:13px;line-height:1.6;color:#8a8276;">Remplissez vos informations — nous vous livrons à domicile, paiement à la réception.</p>
         <form id="orderForm">
-          <div class="form-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+          <div style="display:grid;gap:16px;">
             <div style="grid-column:1 / -1;"><label class="flab" for="f-nom">Nom complet</label><input id="f-nom" class="inp" type="text" required placeholder="Ex. Salma Benali"></div>
             <div><label class="flab" for="f-tel">Téléphone</label><input id="f-tel" class="inp" type="tel" required placeholder="06 00 00 00 00"></div>
-            <div><label class="flab" for="f-ville">Ville</label><input id="f-ville" class="inp" type="text" required placeholder="Ex. Casablanca"></div>
-            <div style="grid-column:1 / -1;"><label class="flab" for="f-adr">Adresse de livraison</label><textarea id="f-adr" class="inp" required placeholder="Rue, numéro, quartier…"></textarea></div>
+            <div style="grid-column:1 / -1;"><label class="flab" for="f-adr">Adresse de livraison</label><textarea id="f-adr" class="inp" required placeholder="Ville, rue, numéro, quartier…"></textarea></div>
           </div>
           <div style="margin-top:24px;border-top:1px solid #e8e2d9;padding-top:18px;display:grid;gap:11px;font-size:14px;color:#6b6459;">
             <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
             <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="sumSize">S</span> · <span id="sumQty">1</span></span></div>
             <div class="srow"><span>Coloris</span><span id="sumColor" style="color:#15130f;">Gris</span></div>
-            <div class="srow"><span>Sous-total</span><span id="sumSub" style="color:#15130f;">Dh 699,00 MAD</span></div>
-            <div class="srow"><span>Livraison</span><span style="color:#6b7257;">Gratuite</span></div>
           </div>
           <div style="margin-top:14px;border-top:1px solid #15130f;padding-top:14px;display:flex;justify-content:space-between;align-items:baseline;">
             <span style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;">Total</span>
-            <span id="sumTotal" style="font-family:'Cormorant Garamond',serif;font-size:28px;">Dh 699,00 MAD</span>
+            <span id="sumTotal" style="font-family:'Cormorant Garamond',serif;font-size:28px;">Dh 599,00 MAD</span>
           </div>
           <button type="submit" class="btn btn-dark" style="width:100%;margin-top:22px;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Confirmer la commande</button>
           <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
@@ -230,7 +227,7 @@
           <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
           <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="okSize">S</span> · <span id="okQty">1</span></span></div>
           <div class="srow"><span>Coloris</span><span id="okColor" style="color:#15130f;">Gris</span></div>
-          <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span>Total</span><span id="okTotal" style="color:#15130f;">Dh 699,00 MAD</span></div>
+          <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span>Total</span><span id="okTotal" style="color:#15130f;">Dh 599,00 MAD</span></div>
         </div>
         <button type="button" class="btn btn-dark" id="okCloseBtn" style="margin-top:24px;height:50px;padding:0 34px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Fermer</button>
       </div>
@@ -240,7 +237,7 @@
 
 <script>
 (function () {
-  var PRICE = 699;
+  var PRICE = 599;
   var COLORS = [
     { name: 'Gris', video: 'assets/model-gris.mp4', poster: 'assets/model-gris.jpg' },
     { name: 'Écru', video: 'assets/model-ecru.mp4', poster: 'assets/model-ecru.jpg' }
@@ -257,7 +254,6 @@
     document.getElementById('sumSize').textContent = state.size;
     document.getElementById('sumQty').textContent = state.qty;
     document.getElementById('sumColor').textContent = COLORS[state.color].name;
-    document.getElementById('sumSub').textContent = money(total);
     document.getElementById('sumTotal').textContent = money(total);
   }
   function selectColor(i) {
