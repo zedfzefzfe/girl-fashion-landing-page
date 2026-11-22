@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manteau long avec ceinture — Maison Léora</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<style>
+  body { margin: 0; background: #faf8f4; font-family: 'Jost', system-ui, sans-serif; color: #15130f; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; }
+  .lnk { transition: opacity .2s ease; }
+  .lnk:hover { opacity: .55; }
+  .nav a { transition: color .2s ease; }
+  .nav a:hover { color: #7c4a32; }
+  .btn { display: inline-block; transition: background .25s ease, color .25s ease, border-color .25s ease; }
+  .btn-dark:hover { background: #3a332a; border-color: #3a332a; }
+  .icon-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; min-height: 42px; background: none; border: none; color: #15130f; cursor: pointer; transition: color .2s ease; }
+  .icon-btn:hover { color: #7c4a32; }
+  .size-btn { cursor: pointer; min-width: 54px; height: 50px; padding: 0 16px; border: 1px solid #d8d0c4; border-radius: 999px; font-size: 14px; letter-spacing: .06em; background: #fff; color: #15130f; transition: all .2s ease; }
+  .size-btn:hover { border-color: #15130f; }
+  .size-btn[aria-pressed="true"] { background: #15130f; color: #faf8f4; border-color: #15130f; }
+  .qty-btn { cursor: pointer; width: 50px; height: 50px; border: none; background: none; font-size: 20px; color: #15130f; transition: background .2s ease; }
+  .qty-btn:hover { background: #f1ebe2; }
+  .thumb-btn { cursor: pointer; aspect-ratio: 1/1; background: #ece4d8; border: 1px solid #e8e2d9; display: flex; align-items: center; justify-content: center; padding: 0; transition: border-color .2s ease; }
+  .thumb-btn:hover { border-color: #b9b0a2; }
+  .thumb-btn[aria-pressed="true"] { border-color: #15130f; box-shadow: inset 0 0 0 1px #15130f; }
+  .inp { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #d8d0c4; background: #fff; font: inherit; font-size: 15px; color: #15130f; transition: border-color .2s ease; }
+  textarea.inp { height: 84px; padding: 12px 14px; resize: vertical; }
+  .inp:focus { outline: none; border-color: #15130f; }
+  .ftlink { transition: color .2s ease; }
+  .ftlink:hover { color: #15130f; }
+  .flab { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #6b6459; margin-bottom: 8px; }
+  .srow { display: flex; justify-content: space-between; gap: 16px; }
+  #overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(21,19,15,.55); display: none; align-items: flex-start; justify-content: center; padding: 40px 20px; overflow: auto; }
+  #overlay.open { display: flex; }
+  @media (max-width: 680px) {
+    .ann-social { display: none !important; }
+    .ann-text { font-size: 11px !important; letter-spacing: .08em !important; }
+    .header-top { padding: 18px 18px 0 !important; }
+    .logo-script { font-size: 36px !important; }
+    .nav-row { gap: 18px !important; padding: 16px !important; flex-wrap: wrap !important; }
+    .prod-section { padding: 22px 20px 56px !important; }
+    .prod-wrap { gap: 32px !important; }
+    .hero-title { font-size: 36px !important; }
+    .sec-pad { padding-left: 20px !important; padding-right: 20px !important; }
+    #overlay { padding: 14px 12px !important; }
+    .modal-card { padding: 26px 20px !important; }
+    .form-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 420px) {
+    .logo-script { font-size: 31px !important; }
+    .hero-title { font-size: 29px !important; }
+    .nav-row { gap: 12px !important; font-size: 12px !important; }
+    .ann-text { letter-spacing: .04em !important; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT -->
+  <div style="background:#15130f;color:#efe9e0;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px;height:44px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
+      <div class="ann-social" style="display:flex;gap:14px;align-items:center;">
+        <a href="#" class="lnk" aria-label="Facebook" style="display:inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke-linejoin="round" stroke-linecap="round"/></svg></a>
+        <a href="#" class="lnk" aria-label="Instagram" style="display:inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <div style="justify-self:center;display:flex;align-items:center;gap:16px;">
+        <span class="ann-text" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;">Livraison partout au Maroc à domicile</span>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header style="background:#faf8f4;border-bottom:1px solid #e8e2d9;">
+    <div class="header-top" style="max-width:1280px;margin:0 auto;padding:22px 32px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
+      <div style="display:flex;"><button class="icon-btn" aria-label="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg></button></div>
+      <a href="index.html" class="lnk" style="justify-self:center;text-align:center;line-height:1;">
+        <span class="logo-script" style="display:block;font-family:'Pinyon Script',cursive;font-size:46px;color:#15130f;">Maison Léora</span>
+        <span style="display:block;font-size:10px;letter-spacing:.5em;margin-top:4px;color:#8a8276;text-transform:uppercase;">Signature</span>
+      </a>
+      <div style="display:flex;justify-content:flex-end;gap:2px;">
+        <button class="icon-btn" aria-label="Mon compte"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke-linecap="round"/></svg></button>
+        <button class="icon-btn" aria-label="Panier"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button>
+      </div>
+    </div>
+    <nav class="nav nav-row" aria-label="Navigation principale" style="display:flex;justify-content:center;gap:44px;padding:20px 32px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;">
+      <a href="index.html">Accueil</a><a href="index.html#collection">Catalogue</a><a href="index.html#story">À propos</a><a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="sec-pad" style="max-width:1200px;margin:0 auto;padding:22px 32px 0;font-size:12px;letter-spacing:.08em;color:#8a8276;">
+    <a href="index.html" class="lnk">Accueil</a><span style="margin:0 8px;">/</span><a href="index.html#collection" class="lnk">Catalogue</a><span style="margin:0 8px;">/</span><span style="color:#15130f;">Manteau long avec ceinture</span>
+  </div>
+
+  <!-- PRODUCT -->
+  <section class="prod-section" style="max-width:1200px;margin:0 auto;padding:28px 32px 72px;">
+    <div class="prod-wrap" style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
+      <div style="flex:1 1 500px;min-width:0;">
+        <div style="position:relative;background:#ece4d8;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <button class="icon-btn" aria-label="Agrandir" style="position:absolute;top:16px;left:16px;color:#6b6459;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6" stroke-linecap="round"/></svg></button>
+          <svg width="50%" viewBox="0 0 240 340" fill="none" stroke="#4a4036" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M86 54 C80 80 74 122 72 172 L66 318 L174 318 L168 172 C166 122 160 80 154 54"/>
+            <path d="M86 54 L120 40 L154 54"/><path d="M120 40 L104 88 L108 306"/><path d="M120 40 L140 80 L150 306"/>
+            <path d="M92 60 L84 186"/><path d="M148 60 L156 186"/>
+            <path d="M64 184 L176 184 L176 204 L64 204 Z"/><path d="M150 204 L148 258 M160 204 L163 260"/>
+          </svg>
+          <span id="viewLabel" style="position:absolute;left:24px;bottom:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6b6459;">Face</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;">
+          <button type="button" class="thumb-btn" data-view="Face" aria-pressed="true" aria-label="Vue : Face"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
+          <button type="button" class="thumb-btn" data-view="Profil" aria-pressed="false" aria-label="Vue : Profil"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
+          <button type="button" class="thumb-btn" data-view="Détail ceinture" aria-pressed="false" aria-label="Vue : Détail ceinture"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
+          <button type="button" class="thumb-btn" data-view="Dos" aria-pressed="false" aria-label="Vue : Dos"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
+        </div>
+      </div>
+
+      <div style="flex:1 1 420px;min-width:0;">
+        <p style="margin:0 0 12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8276;">Maison Léora</p>
+        <h1 class="hero-title" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:54px;line-height:1.05;">Manteau long avec ceinture</h1>
+        <p style="margin:20px 0 0;font-size:24px;letter-spacing:.02em;">Dh 699,00 MAD</p>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:#8a8276;">Taxes incluses. <a href="#" class="lnk" style="color:#6b6459;border-bottom:1px solid #b9b0a2;">Frais d&#8217;expédition</a> calculés à l&#8217;étape de paiement.</p>
+        <p style="margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#6b7257;"><span style="width:7px;height:7px;border-radius:50%;background:#6b7257;display:inline-block;"></span>En stock — expédié sous 24h</p>
+
+        <hr style="border:none;border-top:1px solid #e8e2d9;margin:28px 0;">
+
+        <div>
+          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Taille</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button type="button" class="size-btn" data-size="S" aria-pressed="true">S</button>
+            <button type="button" class="size-btn" data-size="M" aria-pressed="false">M</button>
+            <button type="button" class="size-btn" data-size="L" aria-pressed="false">L</button>
+            <button type="button" class="size-btn" data-size="XL" aria-pressed="false">XL</button>
+          </div>
+        </div>
+
+        <div style="margin-top:26px;">
+          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Couleur : <span style="color:#6b6459;">Marron</span></p>
+          <span aria-label="Couleur Marron, sélectionnée" style="display:inline-flex;width:38px;height:38px;border-radius:50%;background:#7a4a33;box-shadow:0 0 0 2px #faf8f4,0 0 0 3px #15130f;"></span>
+        </div>
+
+        <div style="margin-top:26px;">
+          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Quantité</p>
+          <div style="display:inline-flex;align-items:center;border:1px solid #d8d0c4;">
+            <button type="button" class="qty-btn" id="qtyDec" aria-label="Diminuer la quantité">&#8722;</button>
+            <span id="qtyVal" aria-live="polite" style="width:52px;text-align:center;font-size:15px;">1</span>
+            <button type="button" class="qty-btn" id="qtyInc" aria-label="Augmenter la quantité">+</button>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;">
+          <button type="button" class="btn btn-dark" id="orderBtn" style="width:100%;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Commander — Paiement à la livraison</button>
+          <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section style="background:#fff;border-top:1px solid #efe9e0;border-bottom:1px solid #efe9e0;">
+    <div class="sec-pad" style="max-width:1100px;margin:0 auto;padding:76px 32px;display:flex;flex-wrap:wrap;gap:56px;">
+      <div style="flex:1 1 380px;min-width:0;">
+        <p style="margin:0 0 14px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Description</p>
+        <h2 style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;line-height:1.15;">Une silhouette longue, enveloppante</h2>
+        <p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#6b6459;">Taillé dans une laine mélangée au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle.</p>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#6b6459;">Une confection soignée, livrée partout au Maroc, directement à votre porte.</p>
+      </div>
+      <div style="flex:1 1 300px;min-width:0;">
+        <p style="margin:0 0 18px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Détails</p>
+        <dl style="margin:0;">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Composition</dt><dd style="margin:0;font-size:14px;text-align:right;">70% laine, 30% polyester</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Coupe</dt><dd style="margin:0;font-size:14px;text-align:right;">Longue, ceinturée</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Entretien</dt><dd style="margin:0;font-size:14px;text-align:right;">Nettoyage à sec</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;"><dt style="color:#8a8276;font-size:14px;">Référence</dt><dd style="margin:0;font-size:14px;text-align:right;">MLC-2026</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#15130f;color:#cfc8bd;">
+    <div class="sec-pad" style="max-width:1280px;margin:0 auto;padding:56px 32px 36px;text-align:center;">
+      <span style="display:block;font-family:'Pinyon Script',cursive;font-size:38px;color:#faf8f4;">Maison Léora</span>
+      <span style="display:block;font-size:10px;letter-spacing:.5em;margin-top:6px;color:#8a8276;text-transform:uppercase;">Signature</span>
+      <p style="margin:24px 0 0;font-size:12px;letter-spacing:.06em;color:#8a8276;">© 2026 Maison Léora — Livraison partout au Maroc · Paiement à la livraison</p>
+    </div>
+  </footer>
+
+  <!-- ORDER MODAL -->
+  <div id="overlay" role="dialog" aria-modal="true" aria-label="Commander — Manteau long avec ceinture">
+    <div class="modal-card" style="background:#faf8f4;width:100%;max-width:520px;padding:34px;position:relative;box-shadow:0 30px 90px rgba(21,19,15,.35);">
+      <button type="button" class="icon-btn" id="closeBtn" aria-label="Fermer" style="position:absolute;top:14px;right:14px;color:#6b6459;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg></button>
+
+      <div id="formView">
+        <p style="margin:0 0 4px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Paiement à la livraison</p>
+        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;">Commander maintenant</h2>
+        <p style="margin:0 0 22px;font-size:13px;line-height:1.6;color:#8a8276;">Remplissez vos informations — nous vous livrons à domicile, paiement à la réception.</p>
+        <form id="orderForm">
+          <div class="form-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+            <div style="grid-column:1 / -1;"><label class="flab" for="f-nom">Nom complet</label><input id="f-nom" class="inp" type="text" required placeholder="Ex. Salma Benali"></div>
+            <div><label class="flab" for="f-tel">Téléphone</label><input id="f-tel" class="inp" type="tel" required placeholder="06 00 00 00 00"></div>
+            <div><label class="flab" for="f-ville">Ville</label><input id="f-ville" class="inp" type="text" required placeholder="Ex. Casablanca"></div>
+            <div style="grid-column:1 / -1;"><label class="flab" for="f-adr">Adresse de livraison</label><textarea id="f-adr" class="inp" required placeholder="Rue, numéro, quartier…"></textarea></div>
+          </div>
+          <div style="margin-top:24px;border-top:1px solid #e8e2d9;padding-top:18px;display:grid;gap:11px;font-size:14px;color:#6b6459;">
+            <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
+            <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="sumSize">S</span> · <span id="sumQty">1</span></span></div>
+            <div class="srow"><span>Sous-total</span><span id="sumSub" style="color:#15130f;">Dh 699,00 MAD</span></div>
+            <div class="srow"><span>Livraison</span><span style="color:#6b7257;">Gratuite</span></div>
+          </div>
+          <div style="margin-top:14px;border-top:1px solid #15130f;padding-top:14px;display:flex;justify-content:space-between;align-items:baseline;">
+            <span style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;">Total</span>
+            <span id="sumTotal" style="font-family:'Cormorant Garamond',serif;font-size:28px;">Dh 699,00 MAD</span>
+          </div>
+          <button type="submit" class="btn btn-dark" style="width:100%;margin-top:22px;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Confirmer la commande</button>
+          <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+        </form>
+      </div>
+
+      <div id="successView" style="display:none;text-align:center;padding:16px 0 4px;">
+        <div style="display:flex;justify-content:center;margin-bottom:18px;"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.4l2.6 2.6 5.2-5.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2 style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;">Commande confirmée</h2>
+        <p style="margin:0 auto 24px;max-width:360px;font-size:14px;line-height:1.7;color:#6b6459;">Merci ! Nous vous appellerons rapidement pour confirmer la livraison de votre commande.</p>
+        <div style="text-align:left;border:1px solid #e3ddd2;background:#fff;padding:18px 20px;display:grid;gap:10px;font-size:14px;color:#6b6459;">
+          <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
+          <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="okSize">S</span> · <span id="okQty">1</span></span></div>
+          <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span>Total</span><span id="okTotal" style="color:#15130f;">Dh 699,00 MAD</span></div>
+        </div>
+        <button type="button" class="btn btn-dark" id="okCloseBtn" style="margin-top:24px;height:50px;padding:0 34px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Fermer</button>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+(function () {
+  var PRICE = 699;
+  var state = { size: 'S', qty: 1, view: 'Face' };
+  function money(n) {
+    var s = Math.round(n).toString(), out = '';
+    for (var i = 0; i < s.length; i++) { if (i > 0 && (s.length - i) % 3 === 0) out += ' '; out += s[i]; }
+    return 'Dh ' + out + ',00 MAD';
+  }
+  function syncSummary() {
+    var total = PRICE * state.qty;
+    document.getElementById('sumSize').textContent = state.size;
+    document.getElementById('sumQty').textContent = state.qty;
+    document.getElementById('sumSub').textContent = money(total);
+    document.getElementById('sumTotal').textContent = money(total);
+  }
+  document.querySelectorAll('.size-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      state.size = b.getAttribute('data-size');
+      document.querySelectorAll('.size-btn').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      syncSummary();
+    });
+  });
+  document.querySelectorAll('.thumb-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      state.view = b.getAttribute('data-view');
+      document.getElementById('viewLabel').textContent = state.view;
+      document.querySelectorAll('.thumb-btn').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    });
+  });
+  document.getElementById('qtyDec').addEventListener('click', function () {
+    state.qty = Math.max(1, state.qty - 1); document.getElementById('qtyVal').textContent = state.qty; syncSummary();
+  });
+  document.getElementById('qtyInc').addEventListener('click', function () {
+    state.qty = Math.min(99, state.qty + 1); document.getElementById('qtyVal').textContent = state.qty; syncSummary();
+  });
+  var overlay = document.getElementById('overlay');
+  function openModal() {
+    document.getElementById('formView').style.display = 'block';
+    document.getElementById('successView').style.display = 'none';
+    syncSummary();
+    overlay.classList.add('open');
+  }
+  function closeModal() { overlay.classList.remove('open'); }
+  document.getElementById('orderBtn').addEventListener('click', openModal);
+  document.getElementById('closeBtn').addEventListener('click', closeModal);
+  document.getElementById('okCloseBtn').addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var total = PRICE * state.qty;
+    document.getElementById('okSize').textContent = state.size;
+    document.getElementById('okQty').textContent = state.qty;
+    document.getElementById('okTotal').textContent = money(total);
+    document.getElementById('formView').style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+  });
+})();
+</script>
+</body>
+</html>
