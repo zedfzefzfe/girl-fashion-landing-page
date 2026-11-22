@@ -24,9 +24,13 @@
   .size-btn[aria-pressed="true"] { background: #15130f; color: #faf8f4; border-color: #15130f; }
   .qty-btn { cursor: pointer; width: 50px; height: 50px; border: none; background: none; font-size: 20px; color: #15130f; transition: background .2s ease; }
   .qty-btn:hover { background: #f1ebe2; }
-  .thumb-btn { cursor: pointer; aspect-ratio: 1/1; background: #ece4d8; border: 1px solid #e8e2d9; display: flex; align-items: center; justify-content: center; padding: 0; transition: border-color .2s ease; }
-  .thumb-btn:hover { border-color: #b9b0a2; }
-  .thumb-btn[aria-pressed="true"] { border-color: #15130f; box-shadow: inset 0 0 0 1px #15130f; }
+  .vthumb { cursor: pointer; aspect-ratio: 3/4; overflow: hidden; border: 1px solid #e8e2d9; background: #ece4d8; padding: 0; transition: border-color .2s ease; }
+  .vthumb:hover { border-color: #b9b0a2; }
+  .vthumb[aria-pressed="true"] { border-color: #15130f !important; box-shadow: inset 0 0 0 1px #15130f; }
+  .color-btn { cursor: pointer; width: 38px; height: 38px; border-radius: 50%; padding: 0; border: 1px solid rgba(21,19,15,.18); transition: box-shadow .2s ease; }
+  .color-btn:hover { box-shadow: 0 0 0 2px #faf8f4, 0 0 0 3px #d8d0c4; }
+  .color-btn[aria-pressed="true"] { box-shadow: 0 0 0 2px #faf8f4, 0 0 0 3px #15130f; }
+  #mainVideo { background: #ece4d8; }
   .inp { width: 100%; height: 48px; padding: 0 14px; border: 1px solid #d8d0c4; background: #fff; font: inherit; font-size: 15px; color: #15130f; transition: border-color .2s ease; }
   textarea.inp { height: 84px; padding: 12px 14px; resize: vertical; }
   .inp:focus { outline: none; border-color: #15130f; }
@@ -80,7 +84,6 @@
       <div style="display:flex;"><button class="icon-btn" aria-label="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg></button></div>
       <a href="index.html" class="lnk" style="justify-self:center;text-align:center;line-height:1;">
         <img src="assets/girls-house-logo.png" alt="Girl's House" class="logo-img" style="display:block;height:80px;width:auto;">
-        
       </a>
       <div style="display:flex;justify-content:flex-end;gap:2px;">
         <button class="icon-btn" aria-label="Mon compte"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke-linecap="round"/></svg></button>
@@ -100,22 +103,17 @@
   <!-- PRODUCT -->
   <section class="prod-section" style="max-width:1200px;margin:0 auto;padding:28px 32px 72px;">
     <div class="prod-wrap" style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
-      <div style="flex:1 1 500px;min-width:0;">
-        <div style="position:relative;background:#ece4d8;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-          <button class="icon-btn" aria-label="Agrandir" style="position:absolute;top:16px;left:16px;color:#6b6459;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6" stroke-linecap="round"/></svg></button>
-          <svg width="50%" viewBox="0 0 240 340" fill="none" stroke="#4a4036" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M86 54 C80 80 74 122 72 172 L66 318 L174 318 L168 172 C166 122 160 80 154 54"/>
-            <path d="M86 54 L120 40 L154 54"/><path d="M120 40 L104 88 L108 306"/><path d="M120 40 L140 80 L150 306"/>
-            <path d="M92 60 L84 186"/><path d="M148 60 L156 186"/>
-            <path d="M64 184 L176 184 L176 204 L64 204 Z"/><path d="M150 204 L148 258 M160 204 L163 260"/>
-          </svg>
-          <span id="viewLabel" style="position:absolute;left:24px;bottom:20px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6b6459;">Face</span>
+      <div style="flex:1 1 440px;min-width:0;">
+        <div style="position:relative;background:#ece4d8;aspect-ratio:3/4;overflow:hidden;">
+          <video id="mainVideo" src="assets/model-gris.mp4" poster="assets/model-gris.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo du mannequin portant le manteau" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;"></video>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px;">
-          <button type="button" class="thumb-btn" data-view="Face" aria-pressed="true" aria-label="Vue : Face"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
-          <button type="button" class="thumb-btn" data-view="Profil" aria-pressed="false" aria-label="Vue : Profil"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
-          <button type="button" class="thumb-btn" data-view="Détail ceinture" aria-pressed="false" aria-label="Vue : Détail ceinture"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
-          <button type="button" class="thumb-btn" data-view="Dos" aria-pressed="false" aria-label="Vue : Dos"><svg width="54%" viewBox="0 0 160 210" fill="none" stroke="#6b6459" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M58 36 C54 56 50 92 48 122 L44 196 L116 196 L112 122 C110 92 106 56 102 36"/><path d="M58 36 L80 26 L102 36"/><path d="M80 26 L70 62 L72 190"/><path d="M80 26 L94 58 L100 190"/><path d="M44 112 L116 112 L116 128 L44 128 Z"/></svg></button>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px;">
+          <button type="button" class="vthumb" data-color="0" aria-pressed="true" aria-label="Coloris Gris">
+            <img src="assets/model-gris.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+          </button>
+          <button type="button" class="vthumb" data-color="1" aria-pressed="false" aria-label="Coloris Écru">
+            <img src="assets/model-ecru.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
+          </button>
         </div>
       </div>
 
@@ -139,8 +137,11 @@
         </div>
 
         <div style="margin-top:26px;">
-          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Couleur : <span style="color:#6b6459;">Marron</span></p>
-          <span aria-label="Couleur Marron, sélectionnée" style="display:inline-flex;width:38px;height:38px;border-radius:50%;background:#7a4a33;box-shadow:0 0 0 2px #faf8f4,0 0 0 3px #15130f;"></span>
+          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Couleur : <span id="colorName" style="color:#6b6459;">Gris</span></p>
+          <div style="display:flex;gap:12px;">
+            <button type="button" class="color-btn" data-color="0" aria-pressed="true" aria-label="Coloris Gris" style="background:#8e9aa1;"></button>
+            <button type="button" class="color-btn" data-color="1" aria-pressed="false" aria-label="Coloris Écru" style="background:#e4ddcc;"></button>
+          </div>
         </div>
 
         <div style="margin-top:26px;">
@@ -166,14 +167,14 @@
       <div style="flex:1 1 380px;min-width:0;">
         <p style="margin:0 0 14px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Description</p>
         <h2 style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;line-height:1.15;">Une silhouette longue, enveloppante</h2>
-        <p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#6b6459;">Taillé dans une laine mélangée au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle.</p>
+        <p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#6b6459;">Taillé dans une laine mélangée au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle. Disponible en Gris et en Écru.</p>
         <p style="margin:0;font-size:16px;line-height:1.8;color:#6b6459;">Une confection soignée, livrée partout au Maroc, directement à votre porte.</p>
       </div>
       <div style="flex:1 1 300px;min-width:0;">
         <p style="margin:0 0 18px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Détails</p>
         <dl style="margin:0;">
           <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Composition</dt><dd style="margin:0;font-size:14px;text-align:right;">70% laine, 30% polyester</dd></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Coupe</dt><dd style="margin:0;font-size:14px;text-align:right;">Longue, ceinturée</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Coloris</dt><dd style="margin:0;font-size:14px;text-align:right;">Gris · Écru</dd></div>
           <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Entretien</dt><dd style="margin:0;font-size:14px;text-align:right;">Nettoyage à sec</dd></div>
           <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;"><dt style="color:#8a8276;font-size:14px;">Référence</dt><dd style="margin:0;font-size:14px;text-align:right;">MLC-2026</dd></div>
         </dl>
@@ -185,7 +186,6 @@
   <footer style="background:#15130f;color:#cfc8bd;">
     <div class="sec-pad" style="max-width:1280px;margin:0 auto;padding:56px 32px 36px;text-align:center;">
       <img src="assets/girls-house-logo.png" alt="Girl's House" class="logo-img-ft" style="display:block;height:78px;width:auto;margin:0 auto;">
-      
       <p style="margin:24px 0 0;font-size:12px;letter-spacing:.06em;color:#8a8276;">© 2026 Girl's House — Livraison partout au Maroc · Paiement à la livraison</p>
     </div>
   </footer>
@@ -209,6 +209,7 @@
           <div style="margin-top:24px;border-top:1px solid #e8e2d9;padding-top:18px;display:grid;gap:11px;font-size:14px;color:#6b6459;">
             <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
             <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="sumSize">S</span> · <span id="sumQty">1</span></span></div>
+            <div class="srow"><span>Coloris</span><span id="sumColor" style="color:#15130f;">Gris</span></div>
             <div class="srow"><span>Sous-total</span><span id="sumSub" style="color:#15130f;">Dh 699,00 MAD</span></div>
             <div class="srow"><span>Livraison</span><span style="color:#6b7257;">Gratuite</span></div>
           </div>
@@ -228,6 +229,7 @@
         <div style="text-align:left;border:1px solid #e3ddd2;background:#fff;padding:18px 20px;display:grid;gap:10px;font-size:14px;color:#6b6459;">
           <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long avec ceinture</span></div>
           <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="okSize">S</span> · <span id="okQty">1</span></span></div>
+          <div class="srow"><span>Coloris</span><span id="okColor" style="color:#15130f;">Gris</span></div>
           <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span>Total</span><span id="okTotal" style="color:#15130f;">Dh 699,00 MAD</span></div>
         </div>
         <button type="button" class="btn btn-dark" id="okCloseBtn" style="margin-top:24px;height:50px;padding:0 34px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Fermer</button>
@@ -239,7 +241,12 @@
 <script>
 (function () {
   var PRICE = 699;
-  var state = { size: 'S', qty: 1, view: 'Face' };
+  var COLORS = [
+    { name: 'Gris', video: 'assets/model-gris.mp4', poster: 'assets/model-gris.jpg' },
+    { name: 'Écru', video: 'assets/model-ecru.mp4', poster: 'assets/model-ecru.jpg' }
+  ];
+  var state = { size: 'S', qty: 1, color: 0 };
+
   function money(n) {
     var s = Math.round(n).toString(), out = '';
     for (var i = 0; i < s.length; i++) { if (i > 0 && (s.length - i) % 3 === 0) out += ' '; out += s[i]; }
@@ -249,21 +256,33 @@
     var total = PRICE * state.qty;
     document.getElementById('sumSize').textContent = state.size;
     document.getElementById('sumQty').textContent = state.qty;
+    document.getElementById('sumColor').textContent = COLORS[state.color].name;
     document.getElementById('sumSub').textContent = money(total);
     document.getElementById('sumTotal').textContent = money(total);
   }
+  function selectColor(i) {
+    if (i === state.color) return;
+    state.color = i;
+    var v = document.getElementById('mainVideo');
+    v.setAttribute('poster', COLORS[i].poster);
+    v.setAttribute('src', COLORS[i].video);
+    v.load();
+    var pr = v.play(); if (pr && pr.catch) { pr.catch(function () {}); }
+    document.getElementById('colorName').textContent = COLORS[i].name;
+    document.querySelectorAll('.color-btn, .vthumb').forEach(function (b) {
+      b.setAttribute('aria-pressed', (+b.getAttribute('data-color')) === i ? 'true' : 'false');
+    });
+    syncSummary();
+  }
+  document.querySelectorAll('.color-btn, .vthumb').forEach(function (b) {
+    b.addEventListener('click', function () { selectColor(+b.getAttribute('data-color')); });
+  });
+
   document.querySelectorAll('.size-btn').forEach(function (b) {
     b.addEventListener('click', function () {
       state.size = b.getAttribute('data-size');
       document.querySelectorAll('.size-btn').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       syncSummary();
-    });
-  });
-  document.querySelectorAll('.thumb-btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      state.view = b.getAttribute('data-view');
-      document.getElementById('viewLabel').textContent = state.view;
-      document.querySelectorAll('.thumb-btn').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     });
   });
   document.getElementById('qtyDec').addEventListener('click', function () {
@@ -272,6 +291,7 @@
   document.getElementById('qtyInc').addEventListener('click', function () {
     state.qty = Math.min(99, state.qty + 1); document.getElementById('qtyVal').textContent = state.qty; syncSummary();
   });
+
   var overlay = document.getElementById('overlay');
   function openModal() {
     document.getElementById('formView').style.display = 'block';
@@ -287,10 +307,10 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
   document.getElementById('orderForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    var total = PRICE * state.qty;
     document.getElementById('okSize').textContent = state.size;
     document.getElementById('okQty').textContent = state.qty;
-    document.getElementById('okTotal').textContent = money(total);
+    document.getElementById('okColor').textContent = COLORS[state.color].name;
+    document.getElementById('okTotal').textContent = money(PRICE * state.qty);
     document.getElementById('formView').style.display = 'none';
     document.getElementById('successView').style.display = 'block';
   });
