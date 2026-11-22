@@ -1,4 +1,4 @@
-# Maison Léora — Girl Fashion Landing Page
+# Girl's House — Girl Fashion Landing Page
 
 An elegant, fully responsive storefront for a women's fashion brand, built as static HTML/CSS (no build step, no dependencies beyond Google Fonts).
 
@@ -9,7 +9,7 @@ An elegant, fully responsive storefront for a women's fashion brand, built as st
 ## Features
 - Responsive (desktop → mobile) with a single-column order form on small screens.
 - Minimalist fashion aesthetic: cream palette, Cormorant Garamond display, Jost UI, Pinyon Script wordmark.
-- Original line-art illustrations and placeholder brand (*Maison Léora*) — swap in your own name and product photos.
+- Original line-art illustrations and placeholder brand (*Girl's House*) — swap in your own name and product photos.
 - French UI, tuned for the Moroccan market (livraison partout au Maroc, paiement à la livraison).
 
 ## Notes
