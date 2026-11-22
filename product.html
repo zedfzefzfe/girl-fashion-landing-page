@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manteau long cachemire — Girl's House</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
   body { margin: 0; background: #faf8f4; font-family: 'Jost', system-ui, sans-serif; color: #15130f; font-weight: 300; -webkit-font-smoothing: antialiased; }
   * { box-sizing: border-box; }
@@ -216,6 +217,7 @@
           </div>
           <button type="submit" class="btn btn-dark" style="width:100%;margin-top:22px;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Confirmer la commande</button>
           <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+          <p id="orderError" role="alert" style="display:none;margin:12px 0 0;text-align:center;font-size:13px;color:#b23b3b;">Une erreur s&#8217;est produite. Réessayez, ou contactez-nous sur WhatsApp.</p>
         </form>
       </div>
 
@@ -243,6 +245,15 @@
     { name: 'Écru', video: 'assets/model-ecru.mp4', poster: 'assets/model-ecru.jpg' }
   ];
   var state = { size: 'S', qty: 1, color: 0 };
+
+  // ===== EmailJS — paste your 3 IDs from the EmailJS dashboard =====
+  var EMAILJS_PUBLIC_KEY = 'VOTRE_CLE_PUBLIQUE';
+  var EMAILJS_SERVICE_ID = 'VOTRE_SERVICE_ID';
+  var EMAILJS_TEMPLATE_ID = 'VOTRE_TEMPLATE_ID';
+  var emailjsReady = false;
+  if (window.emailjs && EMAILJS_PUBLIC_KEY.indexOf('VOTRE_') !== 0) {
+    try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); emailjsReady = true; } catch (e) {}
+  }
 
   function money(n) {
     var s = Math.round(n).toString(), out = '';
@@ -301,14 +312,39 @@
   document.getElementById('okCloseBtn').addEventListener('click', closeModal);
   overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
-  document.getElementById('orderForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+  function showConfirmation() {
     document.getElementById('okSize').textContent = state.size;
     document.getElementById('okQty').textContent = state.qty;
     document.getElementById('okColor').textContent = COLORS[state.color].name;
     document.getElementById('okTotal').textContent = money(PRICE * state.qty);
     document.getElementById('formView').style.display = 'none';
     document.getElementById('successView').style.display = 'block';
+  }
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var form = this;
+    var btn = form.querySelector('button[type="submit"]');
+    var err = document.getElementById('orderError');
+    err.style.display = 'none';
+    var params = {
+      name: document.getElementById('f-nom').value,
+      phone: document.getElementById('f-tel').value,
+      address: document.getElementById('f-adr').value,
+      product: 'Manteau long cachemire',
+      size: state.size,
+      color: COLORS[state.color].name,
+      quantity: state.qty,
+      total: money(PRICE * state.qty),
+      order_time: new Date().toLocaleString('fr-FR')
+    };
+    if (!emailjsReady) { showConfirmation(); return; }
+    var label = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Envoi en cours…';
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params).then(function () {
+      btn.disabled = false; btn.textContent = label; showConfirmation();
+    }, function () {
+      btn.disabled = false; btn.textContent = label; err.style.display = 'block';
+    });
   });
 })();
 </script>
