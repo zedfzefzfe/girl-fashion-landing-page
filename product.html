@@ -21,7 +21,7 @@ fbq('track', 'ViewContent', {content_name: 'Manteau long cachemire', content_cat
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=El+Messiri:wght@500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&family=Tajawal:wght@300;400;500&display=swap">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
   body { margin: 0; background: #faf8f4; font-family: 'Jost', system-ui, sans-serif; color: #15130f; font-weight: 300; -webkit-font-smoothing: antialiased; }
@@ -31,8 +31,7 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   button { font: inherit; }
   .lnk { transition: opacity .2s ease; }
   .lnk:hover { opacity: .55; }
-  .nav a { transition: color .2s ease; }
-  .nav a:hover { color: #7c4a32; }
+  .nav .navoff { pointer-events: none; }
   .btn { display: inline-block; transition: background .25s ease, color .25s ease, border-color .25s ease; }
   .btn-dark:hover { background: #3a332a; border-color: #3a332a; }
   .icon-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; min-height: 42px; background: none; border: none; color: #15130f; cursor: pointer; transition: color .2s ease; }
@@ -56,13 +55,21 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   .ftlink:hover { color: #15130f; }
   .flab { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #6b6459; margin-bottom: 8px; }
   .srow { display: flex; justify-content: space-between; gap: 16px; }
+  .lang-menu { display: none; position: absolute; top: 100%; inset-inline-end: 0; margin-top: 6px; background: #fff; border: 1px solid #e8e2d9; min-width: 150px; box-shadow: 0 14px 34px rgba(21,19,15,.14); z-index: 60; }
+  .lang-menu.open { display: block; }
+  .lang-opt { display: block; width: 100%; text-align: start; background: none; border: none; cursor: pointer; font-size: 14px; color: #15130f; padding: 11px 16px; }
+  .lang-opt:hover { background: #faf8f4; }
   #overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(21,19,15,.55); display: none; align-items: flex-start; justify-content: center; padding: 40px 20px; overflow: auto; }
   #overlay.open { display: flex; }
+  html[lang="ar"] body { font-family: 'Tajawal', system-ui, sans-serif; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] .hero-title { font-family: 'El Messiri', 'Tajawal', serif; }
+  html[lang="ar"] * { letter-spacing: normal !important; }
+  html[dir="rtl"] #closeBtn { right: auto; left: 14px; }
   @media (max-width: 680px) {
     .ann-social { display: none !important; }
     .ann-text { font-size: 11px !important; letter-spacing: .08em !important; }
-    .header-top { padding: 18px 18px 0 !important; }
-    .logo-script { font-size: 36px !important; } .logo-img { height: 64px !important; } .logo-img-ft { height: 68px !important; }
+    .header-top { padding: 18px 16px 0 !important; }
+    .logo-script { font-size: 36px !important; } .logo-img { height: 58px !important; } .logo-img-ft { height: 68px !important; }
     .nav-row { gap: 18px !important; padding: 16px !important; flex-wrap: wrap !important; }
     .prod-section { padding: 22px 20px 56px !important; }
     .prod-wrap { gap: 32px !important; }
@@ -70,10 +77,9 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
     .sec-pad { padding-left: 20px !important; padding-right: 20px !important; }
     #overlay { padding: 14px 12px !important; }
     .modal-card { padding: 26px 20px !important; }
-    .form-grid { grid-template-columns: 1fr !important; }
   }
   @media (max-width: 420px) {
-    .logo-script { font-size: 31px !important; } .logo-img { height: 56px !important; } .logo-img-ft { height: 60px !important; }
+    .logo-script { font-size: 31px !important; } .logo-img { height: 52px !important; } .logo-img-ft { height: 60px !important; }
     .hero-title { font-size: 29px !important; }
     .nav-row { gap: 12px !important; font-size: 12px !important; }
     .ann-text { letter-spacing: .04em !important; }
@@ -90,7 +96,7 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
         <a href="#" class="lnk" aria-label="Instagram" style="display:inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
       <div style="justify-self:center;display:flex;align-items:center;gap:16px;">
-        <span class="ann-text" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;">Livraison partout au Maroc à domicile</span>
+        <span class="ann-text" data-i18n="ann" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;">Livraison partout au Maroc à domicile</span>
       </div>
       <div></div>
     </div>
@@ -100,22 +106,34 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   <header style="background:#faf8f4;border-bottom:1px solid #e8e2d9;">
     <div class="header-top" style="max-width:1280px;margin:0 auto;padding:22px 32px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
       <div style="display:flex;"><button class="icon-btn" aria-label="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg></button></div>
-      <a href="index.html" class="lnk" style="justify-self:center;text-align:center;line-height:1;">
+      <span style="justify-self:center;text-align:center;line-height:1;">
         <img src="assets/girls-house-logo.png" alt="Girl's House" class="logo-img" style="display:block;height:80px;width:auto;">
-      </a>
-      <div style="display:flex;justify-content:flex-end;gap:2px;">
+      </span>
+      <div style="display:flex;justify-content:flex-end;align-items:center;gap:2px;">
+        <div style="position:relative;">
+          <button type="button" id="langBtn" class="icon-btn" aria-haspopup="true" aria-expanded="false" aria-label="Langue" style="min-width:auto;gap:5px;padding:8px 8px;font-size:12px;letter-spacing:.08em;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18" stroke-linecap="round"/><path d="M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg>
+            <span id="langLabel">FR</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div id="langMenu" class="lang-menu" role="menu">
+            <button type="button" class="lang-opt" data-lang="fr" role="menuitem">Français</button>
+            <button type="button" class="lang-opt" data-lang="en" role="menuitem">English</button>
+            <button type="button" class="lang-opt" data-lang="ar" role="menuitem">العربية</button>
+          </div>
+        </div>
         <button class="icon-btn" aria-label="Mon compte"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke-linecap="round"/></svg></button>
         <button class="icon-btn" aria-label="Panier"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button>
       </div>
     </div>
-    <nav class="nav nav-row" aria-label="Navigation principale" style="display:flex;justify-content:center;gap:44px;padding:20px 32px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;">
-      <a href="index.html">Accueil</a><a href="index.html#collection">Catalogue</a><a href="index.html#story">À propos</a><a href="index.html#contact">Contact</a>
+    <nav class="nav nav-row" aria-label="Navigation" style="display:flex;justify-content:center;gap:44px;padding:20px 32px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#15130f;">
+      <span class="navoff" data-i18n="nav_home">Accueil</span><span class="navoff" data-i18n="nav_catalog">Catalogue</span><span class="navoff" data-i18n="nav_about">À propos</span><span class="navoff" data-i18n="nav_contact">Contact</span>
     </nav>
   </header>
 
   <!-- BREADCRUMB -->
   <div class="sec-pad" style="max-width:1200px;margin:0 auto;padding:22px 32px 0;font-size:12px;letter-spacing:.08em;color:#8a8276;">
-    <a href="index.html" class="lnk">Accueil</a><span style="margin:0 8px;">/</span><a href="index.html#collection" class="lnk">Catalogue</a><span style="margin:0 8px;">/</span><span style="color:#15130f;">Manteau long cachemire</span>
+    <span class="navoff" data-i18n="nav_home">Accueil</span><span style="margin:0 8px;">/</span><span class="navoff" data-i18n="nav_catalog">Catalogue</span><span style="margin:0 8px;">/</span><span data-i18n="prod_name" style="color:#15130f;">Manteau long cachemire</span>
   </div>
 
   <!-- PRODUCT -->
@@ -123,13 +141,13 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
     <div class="prod-wrap" style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;">
       <div style="flex:1 1 440px;min-width:0;">
         <div style="position:relative;background:#ece4d8;aspect-ratio:3/4;overflow:hidden;">
-          <video id="mainVideo" src="assets/model-gris.mp4" poster="assets/model-gris.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Vidéo du mannequin portant le manteau" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;"></video>
+          <video id="mainVideo" src="assets/model-gris.mp4" poster="assets/model-gris.jpg" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;"></video>
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px;">
-          <button type="button" class="vthumb" data-color="0" aria-pressed="true" aria-label="Coloris Gris">
+          <button type="button" class="vthumb" data-color="0" aria-pressed="true" aria-label="Gris">
             <img src="assets/model-gris.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
           </button>
-          <button type="button" class="vthumb" data-color="1" aria-pressed="false" aria-label="Coloris Écru">
+          <button type="button" class="vthumb" data-color="1" aria-pressed="false" aria-label="Écru">
             <img src="assets/model-ecru.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;">
           </button>
         </div>
@@ -137,15 +155,15 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
 
       <div style="flex:1 1 420px;min-width:0;">
         <p style="margin:0 0 12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8276;">Girl's House</p>
-        <h1 class="hero-title" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:54px;line-height:1.05;">Manteau long cachemire</h1>
+        <h1 class="hero-title" data-i18n="prod_name" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:54px;line-height:1.05;">Manteau long cachemire</h1>
         <p style="margin:20px 0 0;font-size:24px;letter-spacing:.02em;">Dh 599,00 MAD</p>
-        <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:#8a8276;">Taxes incluses. <a href="#" class="lnk" style="color:#6b6459;border-bottom:1px solid #b9b0a2;">Frais d&#8217;expédition</a> calculés à l&#8217;étape de paiement.</p>
-        <p style="margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#6b7257;"><span style="width:7px;height:7px;border-radius:50%;background:#6b7257;display:inline-block;"></span>En stock — expédié sous 24h</p>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:#8a8276;"><span data-i18n="tax_1">Taxes incluses.</span> <a href="#" class="lnk" data-i18n="tax_link" style="color:#6b6459;border-bottom:1px solid #b9b0a2;">Frais d&#8217;expédition</a> <span data-i18n="tax_2">calculés à l&#8217;étape de paiement.</span></p>
+        <p style="margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#6b7257;"><span style="width:7px;height:7px;border-radius:50%;background:#6b7257;display:inline-block;"></span><span data-i18n="stock">En stock — expédié sous 24h</span></p>
 
         <hr style="border:none;border-top:1px solid #e8e2d9;margin:28px 0;">
 
         <div>
-          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Taille</p>
+          <p data-i18n="size_label" style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Taille</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <button type="button" class="size-btn" data-size="S" aria-pressed="true">S</button>
             <button type="button" class="size-btn" data-size="M" aria-pressed="false">M</button>
@@ -157,25 +175,25 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
         </div>
 
         <div style="margin-top:26px;">
-          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Couleur : <span id="colorName" style="color:#6b6459;">Gris</span></p>
+          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;"><span data-i18n="color_label">Couleur :</span> <span id="colorName" style="color:#6b6459;">Gris</span></p>
           <div style="display:flex;gap:12px;">
-            <button type="button" class="color-btn" data-color="0" aria-pressed="true" aria-label="Coloris Gris" style="background:#8e9aa1;"></button>
-            <button type="button" class="color-btn" data-color="1" aria-pressed="false" aria-label="Coloris Écru" style="background:#e4ddcc;"></button>
+            <button type="button" class="color-btn" data-color="0" aria-pressed="true" aria-label="Gris" style="background:#8e9aa1;"></button>
+            <button type="button" class="color-btn" data-color="1" aria-pressed="false" aria-label="Écru" style="background:#e4ddcc;"></button>
           </div>
         </div>
 
         <div style="margin-top:26px;">
-          <p style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Quantité</p>
+          <p data-i18n="qty_label" style="margin:0 0 12px;font-size:13px;letter-spacing:.04em;">Quantité</p>
           <div style="display:inline-flex;align-items:center;border:1px solid #d8d0c4;">
-            <button type="button" class="qty-btn" id="qtyDec" aria-label="Diminuer la quantité">&#8722;</button>
+            <button type="button" class="qty-btn" id="qtyDec" aria-label="-">&#8722;</button>
             <span id="qtyVal" aria-live="polite" style="width:52px;text-align:center;font-size:15px;">1</span>
-            <button type="button" class="qty-btn" id="qtyInc" aria-label="Augmenter la quantité">+</button>
+            <button type="button" class="qty-btn" id="qtyInc" aria-label="+">+</button>
           </div>
         </div>
 
         <div style="margin-top:32px;">
-          <button type="button" class="btn btn-dark" id="orderBtn" style="width:100%;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Commander — Paiement à la livraison</button>
-          <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+          <button type="button" class="btn btn-dark" id="orderBtn" data-i18n="order_btn" style="width:100%;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Commander — Paiement à la livraison</button>
+          <p data-i18n="reassure" style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
         </div>
       </div>
     </div>
@@ -185,18 +203,18 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   <section style="background:#fff;border-top:1px solid #efe9e0;border-bottom:1px solid #efe9e0;">
     <div class="sec-pad" style="max-width:1100px;margin:0 auto;padding:76px 32px;display:flex;flex-wrap:wrap;gap:56px;">
       <div style="flex:1 1 380px;min-width:0;">
-        <p style="margin:0 0 14px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Description</p>
-        <h2 style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;line-height:1.15;">Une silhouette longue, enveloppante</h2>
-        <p style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#6b6459;">Taillé dans un pur cachemire au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle. Disponible en Gris et en Écru.</p>
-        <p style="margin:0;font-size:16px;line-height:1.8;color:#6b6459;">Une confection soignée, livrée partout au Maroc, directement à votre porte.</p>
+        <p data-i18n="desc_eyebrow" style="margin:0 0 14px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Description</p>
+        <h2 data-i18n="desc_title" style="margin:0 0 20px;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:34px;line-height:1.15;">Une silhouette longue, enveloppante</h2>
+        <p data-i18n="desc_p1" style="margin:0 0 16px;font-size:16px;line-height:1.8;color:#6b6459;">Taillé dans un pur cachemire au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle. Disponible en Gris et en Écru.</p>
+        <p data-i18n="desc_p2" style="margin:0;font-size:16px;line-height:1.8;color:#6b6459;">Une confection soignée, livrée partout au Maroc, directement à votre porte.</p>
       </div>
       <div style="flex:1 1 300px;min-width:0;">
-        <p style="margin:0 0 18px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Détails</p>
+        <p data-i18n="det_eyebrow" style="margin:0 0 18px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Détails</p>
         <dl style="margin:0;">
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Composition</dt><dd style="margin:0;font-size:14px;text-align:right;">100% cachemire</dd></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Coloris</dt><dd style="margin:0;font-size:14px;text-align:right;">Gris · Écru</dd></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt style="color:#8a8276;font-size:14px;">Entretien</dt><dd style="margin:0;font-size:14px;text-align:right;">Nettoyage à sec</dd></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;"><dt style="color:#8a8276;font-size:14px;">Référence</dt><dd style="margin:0;font-size:14px;text-align:right;">MLC-2026</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt data-i18n="det_comp_label" style="color:#8a8276;font-size:14px;">Composition</dt><dd data-i18n="det_comp_val" style="margin:0;font-size:14px;">100% cachemire</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt data-i18n="det_col_label" style="color:#8a8276;font-size:14px;">Coloris</dt><dd data-i18n="det_col_val" style="margin:0;font-size:14px;">Gris · Écru</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid #efe9e0;"><dt data-i18n="det_care_label" style="color:#8a8276;font-size:14px;">Entretien</dt><dd data-i18n="det_care_val" style="margin:0;font-size:14px;">Nettoyage à sec</dd></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;"><dt data-i18n="det_ref_label" style="color:#8a8276;font-size:14px;">Référence</dt><dd style="margin:0;font-size:14px;">MLC-2026</dd></div>
         </dl>
       </div>
     </div>
@@ -206,169 +224,298 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   <footer style="background:#15130f;color:#cfc8bd;">
     <div class="sec-pad" style="max-width:1280px;margin:0 auto;padding:56px 32px 36px;text-align:center;">
       <img src="assets/girls-house-logo.png" alt="Girl's House" class="logo-img-ft" style="display:block;height:78px;width:auto;margin:0 auto;">
-      <p style="margin:24px 0 0;font-size:12px;letter-spacing:.06em;color:#8a8276;">© 2026 Girl's House — Livraison partout au Maroc · Paiement à la livraison</p>
+      <p data-i18n="footer_copy" style="margin:24px 0 0;font-size:12px;letter-spacing:.06em;color:#8a8276;">© 2026 Girl's House — Livraison partout au Maroc · Paiement à la livraison</p>
     </div>
   </footer>
 
   <!-- ORDER MODAL -->
-  <div id="overlay" role="dialog" aria-modal="true" aria-label="Commander — Manteau long cachemire">
+  <div id="overlay" role="dialog" aria-modal="true" aria-label="Commander">
     <div class="modal-card" style="background:#faf8f4;width:100%;max-width:520px;padding:34px;position:relative;box-shadow:0 30px 90px rgba(21,19,15,.35);">
       <button type="button" class="icon-btn" id="closeBtn" aria-label="Fermer" style="position:absolute;top:14px;right:14px;color:#6b6459;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg></button>
 
       <div id="formView">
-        <p style="margin:0 0 4px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Paiement à la livraison</p>
-        <h2 style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;">Commander maintenant</h2>
-        <p style="margin:0 0 22px;font-size:13px;line-height:1.6;color:#8a8276;">Remplissez vos informations — nous vous livrons à domicile, paiement à la réception.</p>
+        <p data-i18n="modal_eyebrow" style="margin:0 0 4px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#7c4a32;">Paiement à la livraison</p>
+        <h2 data-i18n="modal_title" style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;">Commander maintenant</h2>
+        <p data-i18n="modal_sub" style="margin:0 0 22px;font-size:13px;line-height:1.6;color:#8a8276;">Remplissez vos informations — nous vous livrons à domicile, paiement à la réception.</p>
         <form id="orderForm">
           <div style="display:grid;gap:16px;">
-            <div style="grid-column:1 / -1;"><label class="flab" for="f-nom">Nom complet</label><input id="f-nom" class="inp" type="text" required placeholder="Ex. Salma Benali"></div>
-            <div><label class="flab" for="f-tel">Téléphone</label><input id="f-tel" class="inp" type="tel" required placeholder="06 00 00 00 00"></div>
-            <div style="grid-column:1 / -1;"><label class="flab" for="f-adr">Adresse de livraison</label><textarea id="f-adr" class="inp" required placeholder="Ville, rue, numéro, quartier…"></textarea></div>
+            <div><label class="flab" for="f-nom" data-i18n="label_nom">Nom complet</label><input id="f-nom" class="inp" type="text" required data-i18n-ph="ph_nom" placeholder="Ex. Salma Benali"></div>
+            <div><label class="flab" for="f-tel" data-i18n="label_tel">Téléphone</label><input id="f-tel" class="inp" type="tel" required placeholder="06 00 00 00 00"></div>
+            <div><label class="flab" for="f-adr" data-i18n="label_adr">Adresse de livraison</label><textarea id="f-adr" class="inp" required data-i18n-ph="ph_adr" placeholder="Ville, rue, numéro, quartier…"></textarea></div>
           </div>
           <div style="margin-top:24px;border-top:1px solid #e8e2d9;padding-top:18px;display:grid;gap:11px;font-size:14px;color:#6b6459;">
-            <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long cachemire</span></div>
-            <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="sumSize">S</span> · <span id="sumQty">1</span></span></div>
-            <div class="srow"><span>Coloris</span><span id="sumColor" style="color:#15130f;">Gris</span></div>
+            <div class="srow"><span data-i18n="sum_product">Produit</span><span data-i18n="prod_name" style="color:#15130f;">Manteau long cachemire</span></div>
+            <div class="srow"><span data-i18n="sum_sizeqty">Taille · Quantité</span><span style="color:#15130f;"><span id="sumSize">S</span> · <span id="sumQty">1</span></span></div>
+            <div class="srow"><span data-i18n="sum_color">Coloris</span><span id="sumColor" style="color:#15130f;">Gris</span></div>
           </div>
           <div style="margin-top:14px;border-top:1px solid #15130f;padding-top:14px;display:flex;justify-content:space-between;align-items:baseline;">
-            <span style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;">Total</span>
+            <span data-i18n="sum_total" style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;">Total</span>
             <span id="sumTotal" style="font-family:'Cormorant Garamond',serif;font-size:28px;">Dh 599,00 MAD</span>
           </div>
-          <button type="submit" class="btn btn-dark" style="width:100%;margin-top:22px;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Confirmer la commande</button>
-          <p style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
-          <p id="orderError" role="alert" style="display:none;margin:12px 0 0;text-align:center;font-size:13px;color:#b23b3b;">Une erreur s&#8217;est produite. Réessayez, ou contactez-nous sur WhatsApp.</p>
+          <button type="submit" class="btn btn-dark" data-i18n="confirm_btn" style="width:100%;margin-top:22px;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Confirmer la commande</button>
+          <p data-i18n="reassure" style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+          <p id="orderError" data-i18n="order_error" role="alert" style="display:none;margin:12px 0 0;text-align:center;font-size:13px;color:#b23b3b;">Une erreur s&#8217;est produite. Réessayez, ou contactez-nous sur WhatsApp.</p>
         </form>
       </div>
 
       <div id="successView" style="display:none;text-align:center;padding:16px 0 4px;">
         <div style="display:flex;justify-content:center;margin-bottom:18px;"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.4l2.6 2.6 5.2-5.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h2 style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;">Commande confirmée</h2>
-        <p style="margin:0 auto 24px;max-width:360px;font-size:14px;line-height:1.7;color:#6b6459;">Merci ! Nous vous appellerons rapidement pour confirmer la livraison de votre commande.</p>
-        <div style="text-align:left;border:1px solid #e3ddd2;background:#fff;padding:18px 20px;display:grid;gap:10px;font-size:14px;color:#6b6459;">
-          <div class="srow"><span>Produit</span><span style="color:#15130f;text-align:right;">Manteau long cachemire</span></div>
-          <div class="srow"><span>Taille · Quantité</span><span style="color:#15130f;"><span id="okSize">S</span> · <span id="okQty">1</span></span></div>
-          <div class="srow"><span>Coloris</span><span id="okColor" style="color:#15130f;">Gris</span></div>
-          <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span>Total</span><span id="okTotal" style="color:#15130f;">Dh 599,00 MAD</span></div>
+        <h2 data-i18n="success_title" style="margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;">Commande confirmée</h2>
+        <p data-i18n="success_text" style="margin:0 auto 24px;max-width:360px;font-size:14px;line-height:1.7;color:#6b6459;">Merci ! Nous vous appellerons rapidement pour confirmer la livraison de votre commande.</p>
+        <div style="text-align:start;border:1px solid #e3ddd2;background:#fff;padding:18px 20px;display:grid;gap:10px;font-size:14px;color:#6b6459;">
+          <div class="srow"><span data-i18n="sum_product">Produit</span><span data-i18n="prod_name" style="color:#15130f;">Manteau long cachemire</span></div>
+          <div class="srow"><span data-i18n="sum_sizeqty">Taille · Quantité</span><span style="color:#15130f;"><span id="okSize">S</span> · <span id="okQty">1</span></span></div>
+          <div class="srow"><span data-i18n="sum_color">Coloris</span><span id="okColor" style="color:#15130f;">Gris</span></div>
+          <div class="srow" style="border-top:1px solid #efe9e0;padding-top:10px;"><span data-i18n="sum_total">Total</span><span id="okTotal" style="color:#15130f;">Dh 599,00 MAD</span></div>
         </div>
-        <button type="button" class="btn btn-dark" id="okCloseBtn" style="margin-top:24px;height:50px;padding:0 34px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Fermer</button>
+        <button type="button" class="btn btn-dark" id="okCloseBtn" data-i18n="close_btn" style="margin-top:24px;height:50px;padding:0 34px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:12px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Fermer</button>
       </div>
 
     </div>
   </div>
 
 <script>
+/* ===================== i18n ===================== */
+var I18N = {
+  fr: {
+    ann: "Livraison partout au Maroc à domicile",
+    nav_home: "Accueil", nav_catalog: "Catalogue", nav_about: "À propos", nav_contact: "Contact",
+    prod_name: "Manteau long cachemire",
+    tax_1: "Taxes incluses.", tax_link: "Frais d’expédition", tax_2: "calculés à l’étape de paiement.",
+    stock: "En stock — expédié sous 24h",
+    size_label: "Taille", color_label: "Couleur :", qty_label: "Quantité",
+    color_gris: "Gris", color_ecru: "Écru",
+    order_btn: "Commander — Paiement à la livraison",
+    reassure: "Paiement à la livraison · Livraison 24–48h · Échange sous 48h",
+    desc_eyebrow: "Description", desc_title: "Une silhouette longue, enveloppante",
+    desc_p1: "Taillé dans un pur cachemire au tombé souple, ce manteau long se porte ceinturé pour souligner la taille, ou ouvert sur une allure plus fluide. Le col montant et les lignes épurées en font une pièce intemporelle. Disponible en Gris et en Écru.",
+    desc_p2: "Une confection soignée, livrée partout au Maroc, directement à votre porte.",
+    det_eyebrow: "Détails", det_comp_label: "Composition", det_comp_val: "100% cachemire",
+    det_col_label: "Coloris", det_col_val: "Gris · Écru", det_care_label: "Entretien", det_care_val: "Nettoyage à sec", det_ref_label: "Référence",
+    footer_copy: "© 2026 Girl’s House — Livraison partout au Maroc · Paiement à la livraison",
+    modal_eyebrow: "Paiement à la livraison", modal_title: "Commander maintenant",
+    modal_sub: "Remplissez vos informations — nous vous livrons à domicile, paiement à la réception.",
+    label_nom: "Nom complet", ph_nom: "Ex. Salma Benali", label_tel: "Téléphone", label_adr: "Adresse de livraison", ph_adr: "Ville, rue, numéro, quartier…",
+    sum_product: "Produit", sum_sizeqty: "Taille · Quantité", sum_color: "Coloris", sum_total: "Total",
+    confirm_btn: "Confirmer la commande",
+    order_error: "Une erreur s’est produite. Réessayez, ou contactez-nous sur WhatsApp.",
+    sending: "Envoi en cours…",
+    success_title: "Commande confirmée",
+    success_text: "Merci ! Nous vous appellerons rapidement pour confirmer la livraison de votre commande.",
+    close_btn: "Fermer"
+  },
+  en: {
+    ann: "Delivery across Morocco, to your door",
+    nav_home: "Home", nav_catalog: "Catalogue", nav_about: "About", nav_contact: "Contact",
+    prod_name: "Cashmere long coat",
+    tax_1: "Taxes included.", tax_link: "Shipping fees", tax_2: "calculated at checkout.",
+    stock: "In stock — ships within 24h",
+    size_label: "Size", color_label: "Colour:", qty_label: "Quantity",
+    color_gris: "Grey", color_ecru: "Ecru",
+    order_btn: "Order — Cash on delivery",
+    reassure: "Cash on delivery · Delivery 24–48h · Exchange within 48h",
+    desc_eyebrow: "Description", desc_title: "A long, enveloping silhouette",
+    desc_p1: "Cut from pure cashmere with a soft drape, this long coat can be worn belted to define the waist, or open for a more fluid look. The stand collar and clean lines make it a timeless piece. Available in Grey and Ecru.",
+    desc_p2: "Carefully crafted, delivered anywhere in Morocco, straight to your door.",
+    det_eyebrow: "Details", det_comp_label: "Composition", det_comp_val: "100% cashmere",
+    det_col_label: "Colours", det_col_val: "Grey · Ecru", det_care_label: "Care", det_care_val: "Dry clean only", det_ref_label: "Reference",
+    footer_copy: "© 2026 Girl’s House — Delivery across Morocco · Cash on delivery",
+    modal_eyebrow: "Cash on delivery", modal_title: "Order now",
+    modal_sub: "Fill in your details — we deliver to your home, you pay on receipt.",
+    label_nom: "Full name", ph_nom: "e.g. Salma Benali", label_tel: "Phone", label_adr: "Delivery address", ph_adr: "City, street, number, area…",
+    sum_product: "Product", sum_sizeqty: "Size · Quantity", sum_color: "Colour", sum_total: "Total",
+    confirm_btn: "Confirm order",
+    order_error: "Something went wrong. Please try again, or contact us on WhatsApp.",
+    sending: "Sending…",
+    success_title: "Order confirmed",
+    success_text: "Thank you! We’ll call you shortly to confirm the delivery of your order.",
+    close_btn: "Close"
+  },
+  ar: {
+    ann: "توصيل إلى جميع أنحاء المغرب حتى باب منزلك",
+    nav_home: "الرئيسية", nav_catalog: "الكتالوج", nav_about: "من نحن", nav_contact: "اتصل بنا",
+    prod_name: "معطف طويل من الكشمير",
+    tax_1: "الضرائب مشمولة.", tax_link: "رسوم الشحن", tax_2: "تُحتسب عند الدفع.",
+    stock: "متوفر — يُشحن خلال 24 ساعة",
+    size_label: "المقاس", color_label: "اللون:", qty_label: "الكمية",
+    color_gris: "رمادي", color_ecru: "عاجي",
+    order_btn: "اطلب الآن — الدفع عند الاستلام",
+    reassure: "الدفع عند الاستلام · التوصيل خلال 24–48 ساعة · الاستبدال خلال 48 ساعة",
+    desc_eyebrow: "الوصف", desc_title: "إطلالة طويلة وأنيقة",
+    desc_p1: "مصنوع من الكشمير الخالص بانسيابية ناعمة، يُلبس هذا المعطف الطويل بحزام لإبراز الخصر أو مفتوحًا لإطلالة أكثر انسيابية. الياقة المرتفعة والخطوط الأنيقة تجعله قطعة خالدة. متوفر باللونين الرمادي والعاجي.",
+    desc_p2: "صناعة متقنة، تُوصَّل إلى جميع أنحاء المغرب مباشرة إلى باب منزلك.",
+    det_eyebrow: "التفاصيل", det_comp_label: "المكونات", det_comp_val: "100% كشمير",
+    det_col_label: "الألوان", det_col_val: "رمادي · عاجي", det_care_label: "العناية", det_care_val: "تنظيف جاف فقط", det_ref_label: "المرجع",
+    footer_copy: "© 2026 Girl’s House — توصيل إلى جميع أنحاء المغرب · الدفع عند الاستلام",
+    modal_eyebrow: "الدفع عند الاستلام", modal_title: "اطلب الآن",
+    modal_sub: "املأ معلوماتك — نوصّل إلى منزلك، والدفع عند الاستلام.",
+    label_nom: "الاسم الكامل", ph_nom: "مثال: سلمى بنعلي", label_tel: "الهاتف", label_adr: "عنوان التوصيل", ph_adr: "المدينة، الشارع، الرقم، الحي…",
+    sum_product: "المنتج", sum_sizeqty: "المقاس · الكمية", sum_color: "اللون", sum_total: "المجموع",
+    confirm_btn: "تأكيد الطلب",
+    order_error: "حدث خطأ ما. حاول مرة أخرى أو تواصل معنا عبر واتساب.",
+    sending: "جارٍ الإرسال…",
+    success_title: "تم تأكيد الطلب",
+    success_text: "شكرًا لك! سنتصل بك قريبًا لتأكيد توصيل طلبك.",
+    close_btn: "إغلاق"
+  }
+};
+var LANG_LABEL = { fr: "FR", en: "EN", ar: "AR" };
+window.__lang = "fr";
+function applyLang(lang) {
+  if (!I18N[lang]) lang = "fr";
+  var d = I18N[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n");
+    if (d[k] != null) el.textContent = d[k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n-ph");
+    if (d[k] != null) el.setAttribute("placeholder", d[k]);
+  });
+  var ll = document.getElementById("langLabel"); if (ll) ll.textContent = LANG_LABEL[lang];
+  window.__lang = lang;
+  try { localStorage.setItem("gh_lang", lang); } catch (e) {}
+  if (window.__onLangChange) window.__onLangChange(lang);
+}
+(function () {
+  var btn = document.getElementById("langBtn");
+  var menu = document.getElementById("langMenu");
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var open = menu.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.querySelectorAll(".lang-opt").forEach(function (o) {
+    o.addEventListener("click", function () {
+      applyLang(o.getAttribute("data-lang"));
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    });
+  });
+  document.addEventListener("click", function () { menu.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); });
+})();
+
+/* ===================== product logic ===================== */
 (function () {
   var PRICE = 599;
   var COLORS = [
-    { name: 'Gris', video: 'assets/model-gris.mp4', poster: 'assets/model-gris.jpg' },
-    { name: 'Écru', video: 'assets/model-ecru.mp4', poster: 'assets/model-ecru.jpg' }
+    { key: "gris", video: "assets/model-gris.mp4", poster: "assets/model-gris.jpg" },
+    { key: "ecru", video: "assets/model-ecru.mp4", poster: "assets/model-ecru.jpg" }
   ];
-  var state = { size: 'S', qty: 1, color: 0 };
+  var state = { size: "S", qty: 1, color: 0 };
 
-  // ===== EmailJS — paste your 3 IDs from the EmailJS dashboard =====
-  var EMAILJS_PUBLIC_KEY = 'X6VzaYLSuLrBDAZL1';
-  var EMAILJS_SERVICE_ID = 'service_blt91oc';
-  var EMAILJS_TEMPLATE_ID = 'template_f9j15w7';
+  var EMAILJS_PUBLIC_KEY = "X6VzaYLSuLrBDAZL1";
+  var EMAILJS_SERVICE_ID = "service_blt91oc";
+  var EMAILJS_TEMPLATE_ID = "template_f9j15w7";
   var emailjsReady = false;
-  if (window.emailjs && EMAILJS_PUBLIC_KEY.indexOf('VOTRE_') !== 0) {
-    try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); emailjsReady = true; } catch (e) {}
-  }
+  if (window.emailjs) { try { emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY }); emailjsReady = true; } catch (e) {} }
 
+  function t(k) { return (I18N[window.__lang] && I18N[window.__lang][k]) || I18N.fr[k]; }
+  function colorName(i) { return t("color_" + COLORS[i].key); }
   function money(n) {
-    var s = Math.round(n).toString(), out = '';
-    for (var i = 0; i < s.length; i++) { if (i > 0 && (s.length - i) % 3 === 0) out += ' '; out += s[i]; }
-    return 'Dh ' + out + ',00 MAD';
+    var s = Math.round(n).toString(), out = "";
+    for (var i = 0; i < s.length; i++) { if (i > 0 && (s.length - i) % 3 === 0) out += " "; out += s[i]; }
+    return "Dh " + out + ",00 MAD";
   }
   function syncSummary() {
-    var total = PRICE * state.qty;
-    document.getElementById('sumSize').textContent = state.size;
-    document.getElementById('sumQty').textContent = state.qty;
-    document.getElementById('sumColor').textContent = COLORS[state.color].name;
-    document.getElementById('sumTotal').textContent = money(total);
+    document.getElementById("sumSize").textContent = state.size;
+    document.getElementById("sumQty").textContent = state.qty;
+    document.getElementById("sumColor").textContent = colorName(state.color);
+    document.getElementById("sumTotal").textContent = money(PRICE * state.qty);
   }
   function selectColor(i) {
     if (i === state.color) return;
     state.color = i;
-    var v = document.getElementById('mainVideo');
-    v.setAttribute('poster', COLORS[i].poster);
-    v.setAttribute('src', COLORS[i].video);
+    var v = document.getElementById("mainVideo");
+    v.setAttribute("poster", COLORS[i].poster);
+    v.setAttribute("src", COLORS[i].video);
     v.load();
     var pr = v.play(); if (pr && pr.catch) { pr.catch(function () {}); }
-    document.getElementById('colorName').textContent = COLORS[i].name;
-    document.querySelectorAll('.color-btn, .vthumb').forEach(function (b) {
-      b.setAttribute('aria-pressed', (+b.getAttribute('data-color')) === i ? 'true' : 'false');
+    document.getElementById("colorName").textContent = colorName(i);
+    document.querySelectorAll(".color-btn, .vthumb").forEach(function (b) {
+      b.setAttribute("aria-pressed", (+b.getAttribute("data-color")) === i ? "true" : "false");
     });
     syncSummary();
   }
-  document.querySelectorAll('.color-btn, .vthumb').forEach(function (b) {
-    b.addEventListener('click', function () { selectColor(+b.getAttribute('data-color')); });
+  document.querySelectorAll(".color-btn, .vthumb").forEach(function (b) {
+    b.addEventListener("click", function () { selectColor(+b.getAttribute("data-color")); });
   });
-
-  document.querySelectorAll('.size-btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      state.size = b.getAttribute('data-size');
-      document.querySelectorAll('.size-btn').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+  document.querySelectorAll(".size-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      state.size = b.getAttribute("data-size");
+      document.querySelectorAll(".size-btn").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
       syncSummary();
     });
   });
-  document.getElementById('qtyDec').addEventListener('click', function () {
-    state.qty = Math.max(1, state.qty - 1); document.getElementById('qtyVal').textContent = state.qty; syncSummary();
+  document.getElementById("qtyDec").addEventListener("click", function () {
+    state.qty = Math.max(1, state.qty - 1); document.getElementById("qtyVal").textContent = state.qty; syncSummary();
   });
-  document.getElementById('qtyInc').addEventListener('click', function () {
-    state.qty = Math.min(99, state.qty + 1); document.getElementById('qtyVal').textContent = state.qty; syncSummary();
+  document.getElementById("qtyInc").addEventListener("click", function () {
+    state.qty = Math.min(99, state.qty + 1); document.getElementById("qtyVal").textContent = state.qty; syncSummary();
   });
 
-  var overlay = document.getElementById('overlay');
+  var overlay = document.getElementById("overlay");
   function openModal() {
-    document.getElementById('formView').style.display = 'block';
-    document.getElementById('successView').style.display = 'none';
+    document.getElementById("formView").style.display = "block";
+    document.getElementById("successView").style.display = "none";
     syncSummary();
-    overlay.classList.add('open');
+    overlay.classList.add("open");
   }
-  function closeModal() { overlay.classList.remove('open'); }
-  document.getElementById('orderBtn').addEventListener('click', openModal);
-  document.getElementById('closeBtn').addEventListener('click', closeModal);
-  document.getElementById('okCloseBtn').addEventListener('click', closeModal);
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+  function closeModal() { overlay.classList.remove("open"); }
+  document.getElementById("orderBtn").addEventListener("click", openModal);
+  document.getElementById("closeBtn").addEventListener("click", closeModal);
+  document.getElementById("okCloseBtn").addEventListener("click", closeModal);
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
   function showConfirmation() {
-    document.getElementById('okSize').textContent = state.size;
-    document.getElementById('okQty').textContent = state.qty;
-    document.getElementById('okColor').textContent = COLORS[state.color].name;
-    document.getElementById('okTotal').textContent = money(PRICE * state.qty);
-    document.getElementById('formView').style.display = 'none';
-    document.getElementById('successView').style.display = 'block';
-    // Meta Pixel — fire the conversion so ads optimize for real orders
-    if (window.fbq) {
-      fbq('track', 'Lead', { content_name: 'Manteau long cachemire', value: PRICE * state.qty, currency: 'MAD' });
-    }
+    document.getElementById("okSize").textContent = state.size;
+    document.getElementById("okQty").textContent = state.qty;
+    document.getElementById("okColor").textContent = colorName(state.color);
+    document.getElementById("okTotal").textContent = money(PRICE * state.qty);
+    document.getElementById("formView").style.display = "none";
+    document.getElementById("successView").style.display = "block";
+    if (window.fbq) { fbq("track", "Lead", { content_name: "Manteau long cachemire", value: PRICE * state.qty, currency: "MAD" }); }
   }
-  document.getElementById('orderForm').addEventListener('submit', function (e) {
+  document.getElementById("orderForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    var form = this;
-    var btn = form.querySelector('button[type="submit"]');
-    var err = document.getElementById('orderError');
-    err.style.display = 'none';
+    var btn = this.querySelector('button[type="submit"]');
+    var err = document.getElementById("orderError");
+    err.style.display = "none";
     var params = {
-      name: document.getElementById('f-nom').value,
-      phone: document.getElementById('f-tel').value,
-      address: document.getElementById('f-adr').value,
-      product: 'Manteau long cachemire',
+      name: document.getElementById("f-nom").value,
+      phone: document.getElementById("f-tel").value,
+      address: document.getElementById("f-adr").value,
+      product: I18N.fr.prod_name,
       size: state.size,
-      color: COLORS[state.color].name,
+      color: I18N.fr["color_" + COLORS[state.color].key],
       quantity: state.qty,
       total: money(PRICE * state.qty),
-      order_time: new Date().toLocaleString('fr-FR')
+      order_time: new Date().toLocaleString("fr-FR")
     };
     if (!emailjsReady) { showConfirmation(); return; }
     var label = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Envoi en cours…';
+    btn.disabled = true; btn.textContent = t("sending");
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params).then(function () {
       btn.disabled = false; btn.textContent = label; showConfirmation();
     }, function () {
-      btn.disabled = false; btn.textContent = label; err.style.display = 'block';
+      btn.disabled = false; btn.textContent = label; err.style.display = "block";
     });
   });
+
+  window.__onLangChange = function () {
+    document.getElementById("colorName").textContent = colorName(state.color);
+    syncSummary();
+  };
+})();
+
+/* init language (saved choice or French) */
+(function () {
+  var saved = "fr";
+  try { saved = localStorage.getItem("gh_lang") || "fr"; } catch (e) {}
+  applyLang(saved);
 })();
 </script>
 </body>
