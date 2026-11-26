@@ -111,7 +111,7 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   <!-- HEADER -->
   <header style="background:#faf8f4;border-bottom:1px solid #e8e2d9;">
     <div class="header-top" style="max-width:1280px;margin:0 auto;padding:22px 32px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
-      <div style="display:flex;"><button class="icon-btn" aria-label="Rechercher"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg></button></div>
+      <div></div>
       <span style="justify-self:center;text-align:center;line-height:1;">
         <img src="assets/girls-house-logo.png" alt="Girl's House" class="logo-img" style="display:block;height:80px;width:auto;">
       </span>
@@ -128,8 +128,6 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
             <button type="button" class="lang-opt" data-lang="ar" role="menuitem">العربية</button>
           </div>
         </div>
-        <button class="icon-btn" aria-label="Mon compte"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke-linecap="round"/></svg></button>
-        <button class="icon-btn" aria-label="Panier"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button>
       </div>
     </div>
     <nav class="nav nav-row" aria-label="Navigation" style="display:flex;justify-content:center;gap:44px;padding:20px 32px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#15130f;">
@@ -163,7 +161,7 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
         <p style="margin:0 0 12px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8a8276;">Girl's House</p>
         <h1 class="hero-title" data-i18n="prod_name" style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:54px;line-height:1.05;">Manteau long à épaulettes en cachemire</h1>
         <p style="margin:20px 0 0;font-size:24px;letter-spacing:.02em;">Dh 599,00 MAD</p>
-        <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:#8a8276;"><span data-i18n="tax_1">Taxes incluses.</span> <a href="#" class="lnk" data-i18n="tax_link" style="color:#6b6459;border-bottom:1px solid #b9b0a2;">Frais d&#8217;expédition</a> <span data-i18n="tax_2">calculés à l&#8217;étape de paiement.</span></p>
+        <p style="margin:12px 0 0;display:flex;align-items:center;gap:8px;font-size:14px;color:#6b7257;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6.5h11v9H3zM14 9.5h4l3 3v3h-7z" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.7"/><circle cx="17.5" cy="17.5" r="1.7"/></svg><span data-i18n="ship_free_line">Livraison gratuite partout au Maroc</span></p>
         <p style="margin:16px 0 0;display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#6b7257;"><span style="width:7px;height:7px;border-radius:50%;background:#6b7257;display:inline-block;"></span><span data-i18n="stock">En stock — expédié sous 24h</span></p>
 
         <hr style="border:none;border-top:1px solid #e8e2d9;margin:28px 0;">
@@ -200,6 +198,25 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
         <div style="margin-top:32px;">
           <button type="button" class="btn btn-dark" id="orderBtn" data-i18n="order_btn" style="width:100%;height:58px;background:#15130f;color:#faf8f4;border:1px solid #15130f;font-size:13px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;">Commander — Paiement à la livraison</button>
           <p data-i18n="reassure" style="margin:16px 0 0;text-align:center;font-size:12px;letter-spacing:.03em;color:#8a8276;">Paiement à la livraison · Livraison 24–48h · Échange sous 48h</p>
+          <div style="margin-top:22px;border-top:1px solid #e8e2d9;padding-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+            <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><path d="M3 6.5h11v9H3zM14 9.5h4l3 3v3h-7z" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.7"/><circle cx="17.5" cy="17.5" r="1.7"/></svg>
+              <span data-i18n="badge_ship" style="font-size:11px;line-height:1.3;color:#6b6459;">Livraison gratuite</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><rect x="2.5" y="7" width="19" height="11" rx="1.5"/><circle cx="12" cy="12.5" r="2.6"/></svg>
+              <span data-i18n="badge_cod" style="font-size:11px;line-height:1.3;color:#6b6459;">Paiement à la livraison</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><path d="M4 9a8 8 0 0 1 13-3l2 2M20 15a8 8 0 0 1-13 3l-2-2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 3v5h-5M5 21v-5h5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="badge_exch" style="font-size:11px;line-height:1.3;color:#6b6459;">Échange sous 48h</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c4a32" stroke-width="1.4" aria-hidden="true"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.2l5-.7z" stroke-linejoin="round"/></svg>
+              <span data-i18n="badge_qual" style="font-size:11px;line-height:1.3;color:#6b6459;">100% cachemire</span>
+            </div>
+          </div>
+          <p data-i18n="cod_reassure" style="margin:16px 0 0;text-align:center;font-size:13px;line-height:1.5;color:#6b7257;">Commandez sans risque — vous payez seulement à la réception, chez vous.</p>
         </div>
       </div>
     </div>
@@ -295,10 +312,13 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
 /* ===================== i18n ===================== */
 var I18N = {
   fr: {
-    ann: "Livraison partout au Maroc à domicile",
+    ann: "Livraison GRATUITE partout au Maroc · Paiement à la livraison",
     nav_home: "Accueil", nav_catalog: "Catalogue", nav_about: "À propos", nav_contact: "Contact",
     prod_name: "Manteau long à épaulettes en cachemire",
     tax_1: "Taxes incluses.", tax_link: "Frais d’expédition", tax_2: "calculés à l’étape de paiement.",
+    ship_free_line: "Livraison gratuite partout au Maroc",
+    badge_ship: "Livraison gratuite", badge_cod: "Paiement à la livraison", badge_exch: "Échange sous 48h", badge_qual: "100% cachemire",
+    cod_reassure: "Commandez sans risque — vous payez seulement à la réception, chez vous.",
     stock: "En stock — expédié sous 24h",
     size_label: "Taille", color_label: "Couleur :", qty_label: "Quantité",
     color_gris: "Gris", color_ecru: "Écru",
@@ -323,10 +343,13 @@ var I18N = {
     cta_order: "Commandez votre manteau"
   },
   en: {
-    ann: "Delivery across Morocco, to your door",
+    ann: "FREE delivery across Morocco · Cash on delivery",
     nav_home: "Home", nav_catalog: "Catalogue", nav_about: "About", nav_contact: "Contact",
     prod_name: "Cashmere long coat with shoulder pads",
     tax_1: "Taxes included.", tax_link: "Shipping fees", tax_2: "calculated at checkout.",
+    ship_free_line: "Free delivery anywhere in Morocco",
+    badge_ship: "Free delivery", badge_cod: "Cash on delivery", badge_exch: "Exchange within 48h", badge_qual: "100% cashmere",
+    cod_reassure: "Order risk-free — you only pay on delivery, at your door.",
     stock: "In stock — ships within 24h",
     size_label: "Size", color_label: "Colour:", qty_label: "Quantity",
     color_gris: "Grey", color_ecru: "Ecru",
@@ -351,10 +374,13 @@ var I18N = {
     cta_order: "Order your coat"
   },
   ar: {
-    ann: "توصيل إلى جميع أنحاء المغرب حتى باب منزلك",
+    ann: "توصيل مجاني إلى جميع أنحاء المغرب · الدفع عند الاستلام",
     nav_home: "الرئيسية", nav_catalog: "الكتالوج", nav_about: "من نحن", nav_contact: "اتصل بنا",
     prod_name: "معطف طويل بأكتاف من الكشمير",
     tax_1: "الضرائب مشمولة.", tax_link: "رسوم الشحن", tax_2: "تُحتسب عند الدفع.",
+    ship_free_line: "توصيل مجاني إلى جميع أنحاء المغرب",
+    badge_ship: "توصيل مجاني", badge_cod: "الدفع عند الاستلام", badge_exch: "استبدال خلال 48 ساعة", badge_qual: "100% كشمير",
+    cod_reassure: "اطلب دون أي مخاطرة — تدفع فقط عند الاستلام في منزلك.",
     stock: "متوفر — يُشحن خلال 24 ساعة",
     size_label: "المقاس", color_label: "اللون:", qty_label: "الكمية",
     color_gris: "رمادي", color_ecru: "عاجي",
