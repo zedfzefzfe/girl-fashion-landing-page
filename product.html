@@ -65,6 +65,14 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
   html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] .hero-title { font-family: 'El Messiri', 'Tajawal', serif; }
   html[lang="ar"] * { letter-spacing: normal !important; }
   html[dir="rtl"] #closeBtn { right: auto; left: 14px; }
+  .faq-item { border-bottom: 1px solid #e8e2d9; }
+  .faq-item:first-child { border-top: 1px solid #e8e2d9; }
+  .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 18px; background: none; border: none; cursor: pointer; text-align: start; padding: 20px 2px; font-family: inherit; font-size: 16px; color: #15130f; }
+  .faq-q .faq-ic { flex: 0 0 auto; color: #7c4a32; transition: transform .25s ease; }
+  .faq-item.open .faq-ic { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+  .faq-item.open .faq-a { max-height: 340px; }
+  .faq-a-inner { padding: 0 2px 22px; font-size: 15px; line-height: 1.75; color: #6b6459; max-width: 660px; }
   @media (max-width: 680px) {
     .ann-social { display: none !important; }
     .ann-text { font-size: 11px !important; letter-spacing: .08em !important; }
@@ -243,6 +251,33 @@ src="https://www.facebook.com/tr?id=2211911843055547&ev=PageView&noscript=1"/></
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="sec-pad" style="max-width:820px;margin:0 auto;padding:64px 32px 72px;">
+    <p data-i18n="faq_title" style="margin:0 0 26px;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:32px;">Questions fréquentes</p>
+    <div id="faqList">
+      <div class="faq-item open">
+        <button type="button" class="faq-q"><span data-i18n="faq_q1">Comment se passe le paiement ?</span><svg class="faq-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a1">Vous ne payez rien à l&#8217;avance. Le règlement se fait en espèces à la livraison, une fois le colis entre vos mains.</div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q"><span data-i18n="faq_q2">La livraison est-elle vraiment gratuite ?</span><svg class="faq-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a2">Oui. Livraison gratuite partout au Maroc, sans aucuns frais cachés.</div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q"><span data-i18n="faq_q3">Et si la taille ne me convient pas ?</span><svg class="faq-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a3">Vous pouvez l&#8217;échanger sous 48h. On s&#8217;arrange pour trouver la taille qui vous va.</div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q"><span data-i18n="faq_q4">En combien de temps serai-je livrée ?</span><svg class="faq-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a4">Entre 24 et 48h, partout au Maroc, directement à votre porte.</div></div>
+      </div>
+      <div class="faq-item">
+        <button type="button" class="faq-q"><span data-i18n="faq_q5">Comment passer commande ?</span><svg class="faq-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq_a5">Remplissez votre nom et votre téléphone, nous vous appelons pour confirmer, puis nous vous livrons à domicile.</div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer style="background:#15130f;color:#cfc8bd;">
     <div class="sec-pad" style="max-width:1280px;margin:0 auto;padding:56px 32px 36px;text-align:center;">
@@ -340,7 +375,13 @@ var I18N = {
     success_title: "Commande confirmée",
     success_text: "Merci ! Nous vous appellerons rapidement pour confirmer la livraison de votre commande.",
     close_btn: "Fermer",
-    cta_order: "Commandez votre manteau"
+    cta_order: "Commandez votre manteau",
+    faq_title: "Questions fréquentes",
+    faq_q1: "Comment se passe le paiement ?", faq_a1: "Vous ne payez rien à l’avance. Le règlement se fait en espèces à la livraison, une fois le colis entre vos mains.",
+    faq_q2: "La livraison est-elle vraiment gratuite ?", faq_a2: "Oui. Livraison gratuite partout au Maroc, sans aucuns frais cachés.",
+    faq_q3: "Et si la taille ne me convient pas ?", faq_a3: "Vous pouvez l’échanger sous 48h. On s’arrange pour trouver la taille qui vous va.",
+    faq_q4: "En combien de temps serai-je livrée ?", faq_a4: "Entre 24 et 48h, partout au Maroc, directement à votre porte.",
+    faq_q5: "Comment passer commande ?", faq_a5: "Remplissez votre nom et votre téléphone, nous vous appelons pour confirmer, puis nous vous livrons à domicile."
   },
   en: {
     ann: "FREE delivery across Morocco · Cash on delivery",
@@ -371,7 +412,13 @@ var I18N = {
     success_title: "Order confirmed",
     success_text: "Thank you! We’ll call you shortly to confirm the delivery of your order.",
     close_btn: "Close",
-    cta_order: "Order your coat"
+    cta_order: "Order your coat",
+    faq_title: "Frequently asked questions",
+    faq_q1: "How does payment work?", faq_a1: "You pay nothing in advance. You pay in cash on delivery, once the parcel is in your hands.",
+    faq_q2: "Is delivery really free?", faq_a2: "Yes. Free delivery anywhere in Morocco, with no hidden fees.",
+    faq_q3: "What if the size doesn’t fit?", faq_a3: "You can exchange it within 48h. We’ll make sure you get the right size.",
+    faq_q4: "How long until I receive it?", faq_a4: "Within 24 to 48h, anywhere in Morocco, straight to your door.",
+    faq_q5: "How do I place an order?", faq_a5: "Fill in your name and phone, we call you to confirm, then we deliver to your home."
   },
   ar: {
     ann: "توصيل مجاني إلى جميع أنحاء المغرب · الدفع عند الاستلام",
@@ -402,7 +449,13 @@ var I18N = {
     success_title: "تم تأكيد الطلب",
     success_text: "شكرًا لك! سنتصل بك قريبًا لتأكيد توصيل طلبك.",
     close_btn: "إغلاق",
-    cta_order: "اطلب معطفك الآن"
+    cta_order: "اطلب معطفك الآن",
+    faq_title: "الأسئلة الشائعة",
+    faq_q1: "كيف تتم عملية الدفع؟", faq_a1: "لا تدفع أي شيء مقدمًا. الدفع يكون نقدًا عند الاستلام، بمجرد وصول الطرد إلى يديك.",
+    faq_q2: "هل التوصيل مجاني فعلاً؟", faq_a2: "نعم. توصيل مجاني إلى جميع أنحاء المغرب، دون أي رسوم خفية.",
+    faq_q3: "وإذا لم يكن المقاس مناسبًا؟", faq_a3: "يمكنك استبداله خلال 48 ساعة. سنحرص على إيجاد المقاس المناسب لك.",
+    faq_q4: "كم من الوقت يستغرق التوصيل؟", faq_a4: "بين 24 و48 ساعة، إلى جميع أنحاء المغرب، مباشرة إلى باب منزلك.",
+    faq_q5: "كيف أقوم بالطلب؟", faq_a5: "املأ اسمك ورقم هاتفك، نتصل بك للتأكيد، ثم نوصّل إلى منزلك."
   }
 };
 var LANG_LABEL = { fr: "FR", en: "EN", ar: "AR" };
@@ -558,6 +611,13 @@ function applyLang(lang) {
     document.getElementById("colorName").textContent = colorName(state.color);
     syncSummary();
   };
+})();
+
+/* ===================== FAQ accordion ===================== */
+(function () {
+  document.querySelectorAll(".faq-q").forEach(function (q) {
+    q.addEventListener("click", function () { q.parentElement.classList.toggle("open"); });
+  });
 })();
 
 /* init language (saved choice or French) */
